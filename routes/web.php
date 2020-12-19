@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\MediaController::class, 'index']);
+Route::get('/download', [\App\Http\Controllers\MediaController::class, 'download']);
+Route::get('/{media}', [\App\Http\Controllers\MediaController::class, 'show']);
