@@ -23,7 +23,7 @@ class CreateMediaTable extends Migration
             $table->timestamp('published_at')->nullable();
             $table->string('author');
             $table->string('author_id');
-            $table->string('tags')->nullable();
+            $table->text('tags')->nullable();
             $table->timestamps();
         });
     }
